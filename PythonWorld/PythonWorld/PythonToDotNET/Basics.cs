@@ -9,7 +9,7 @@ namespace PythonWorld.PythonToDotNET
             CheckOrSetPythonEnvironmentVariable();
 
             PythonEngine.Initialize();
-            //PythonEngine.ImportModule(name)
+
         }
 
         [TestMethod]
