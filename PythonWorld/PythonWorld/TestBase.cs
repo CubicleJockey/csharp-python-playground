@@ -6,14 +6,17 @@
 
         protected TestBase()
         {
-            const string INSTALLPATH = @"C:\Python310";
+
+            var workingDirectory = Environment.CurrentDirectory;
+
+            //const string INSTALLPATH = @"C:\Python310";
             var pythonNetPyDll = Environment.GetEnvironmentVariable(PYTHON);
             if (!string.IsNullOrWhiteSpace(pythonNetPyDll))
             {
-                return;
+                //return;
             }
 
-            var dll = Path.Combine(INSTALLPATH, "python310.dll");
+            var dll = Path.Combine(workingDirectory, "Libs", "Python", "3.11.2", "python311.dll");
             Environment.SetEnvironmentVariable(PYTHON, dll);
         }
     }
